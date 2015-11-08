@@ -10,15 +10,14 @@ package pef.kit.hotel;
         import android.widget.ListView;
 
 public class menufragment extends ListFragment {
-    String[] AndroidOS = new String[]{"Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice Cream SandWich", "Jelly Bean", "KitKat"};
-    String[] Version = new String[]{"1.5", "1.6", "2.0-2.1", "2.2", "2.3", "3.0-3.2", "4.0", "4.1-4.3", "4.4"};
+    String[] Seznam = new String[]{"Booking","Rooms","Contact","About","Services"};
 
     @Override
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.list_view, container, false);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, AndroidOS);
+                android.R.layout.simple_list_item_1, Seznam);
         setListAdapter(adapter);
 
         return view;
@@ -28,7 +27,7 @@ public class menufragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         textfragment txt = (textfragment) getFragmentManager().findFragmentById(R.id.fragment2);
-        txt.change(AndroidOS[position], "Version : " + Version[position]);
+        txt.change(Seznam[position]);
         getListView().setSelector(android.R.color.holo_blue_dark);
     }
 }

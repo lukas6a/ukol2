@@ -19,16 +19,14 @@ public class textfragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.text_fragment, container, false);
-        text= (TextView) view.findViewById(R.id.AndroidOs);
-        vers= (TextView)view.findViewById(R.id.Version);
+        text= (TextView) view.findViewById(R.id.text3);;
 
 
         return view;
 
     }
-    public void change(String txt, String txt1){
+    public void change(String txt){
         text.setText(txt);
-        vers.setText(txt1);
 
     }
 }

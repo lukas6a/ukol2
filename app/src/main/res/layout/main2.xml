@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="pef.kit.hotel.main2">
+
+
+    <fragment
+        android:layout_height="match_parent"
+        android:layout_width="240px"
+        class="pef.kit.hotel.menufragment"
+        android:id="@+id/fragment"
+        tools:layout="@layout/list_view" />
+    <fragment
+        android:layout_width="240px"
+        android:layout_height="match_parent"
+        class="pef.kit.hotel.textfragment"
+        android:id="@+id/fragment2"/>
+
+
+
+
+</LinearLayout>
